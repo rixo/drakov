@@ -30,9 +30,9 @@ describe.only('URI Template Parameters', function () {
         });
     });
 
-    describe('/api/muri/{param1}/{param2}', function(){
+    describe('/api/uri/{param1}/{param2}', function(){
         it('should respond with the first endpoint that matches the number of variables', function(done){
-            request.get('/api/muri/p1/p2')
+            request.get('/api/uri/p1/p2')
                 .expect(200)
                 .expect('Content-type', 'application/json;charset=UTF-8')
                 .expect({id: 'multiple parameters'})
@@ -42,7 +42,7 @@ describe.only('URI Template Parameters', function () {
         it(
             'should respond with the most specific endpoint when some of the variable are specified in the blueprint',
             function(done){
-                request.get('/api/muri/p1/bar')
+                request.get('/api/uri/p1/bar')
                     .expect(200)
                     .expect('Content-type', 'application/json;charset=UTF-8')
                     .expect({id: 'multiple parameters one of two'})
@@ -53,7 +53,7 @@ describe.only('URI Template Parameters', function () {
         it(
             'should respond with the most specific endpoint when all variables are specified',
             function(done){
-                request.get('/api/muri/foo/bar')
+                request.get('/api/uri/foo/bar')
                     .expect(200)
                     .expect('Content-type', 'application/json;charset=UTF-8')
                     .expect({id: 'multiple parameters two of two'})
@@ -64,7 +64,7 @@ describe.only('URI Template Parameters', function () {
         it(
             'should respond with the most specific endpoint with the most fulfilled query params',
             function(done){
-                request.get('/api/muri/foo/bar?q1')
+                request.get('/api/uri/foo/bar?q1')
                     .expect(200)
                     .expect('Content-type', 'application/json;charset=UTF-8')
                     .expect({id: 'multiple parameters two of two & query string'})

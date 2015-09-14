@@ -48,7 +48,7 @@ See [Blueprint API - URI Templates section](https://github.com/apiaryio/api-blue
                "id": "specified"
             }
 
-## Multiple parameters [/api/muri/{param1}/{param2}]
+## Multiple parameters [/api/uri/{param1}/{param2}]
 
 + Parameters
     + param1 (string, `example`) ... Parameter for the request
@@ -64,7 +64,7 @@ See [Blueprint API - URI Templates section](https://github.com/apiaryio/api-blue
                "id": "multiple parameters"
             }
 
-## Multiple parameters one of two filled [/api/muri/{param1}/bar]
+## Multiple parameters one of two filled [/api/uri/{param1}/bar]
 
 + Parameters
     + param1 (string, `example`) ... Parameter for the request
@@ -80,7 +80,7 @@ See [Blueprint API - URI Templates section](https://github.com/apiaryio/api-blue
                "id": "multiple parameters one of two"
             }
 
-## Multiple parameters one of two filled [/api/muri/foo/bar]
+## Multiple parameters one of two filled [/api/uri/foo/bar]
 
 + Parameters
     + param1 (string, `example`) ... Parameter for the request
@@ -96,7 +96,7 @@ See [Blueprint API - URI Templates section](https://github.com/apiaryio/api-blue
                "id": "multiple parameters two of two"
             }
 
-## Multiple parameters two of two filled [/api/muri/foo/bar{?q1}]
+## Multiple parameters two of two filled [/api/uri/foo/bar{?q1}]
 
 + Parameters
     + param1 (stri ng, `example`) ... Parameter for the request
