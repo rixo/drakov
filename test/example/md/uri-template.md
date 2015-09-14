@@ -15,7 +15,22 @@ See [Blueprint API - URI Templates section](https://github.com/apiaryio/api-blue
     + Body
 
             {
-               "id": "raw"
+               "id": "first"
+            }
+
+## Things [/api/uri/{param2}]
+
++ Parameters
+    + param2 (string, `12345`) ... Parameter for the request
+
+### Get with URI template parameter [GET]
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+               "id": "second"
             }
 
 ## Things [/api/uri/specified]
@@ -63,6 +78,22 @@ See [Blueprint API - URI Templates section](https://github.com/apiaryio/api-blue
 
             {
                "id": "multiple parameters one of two"
+            }
+
+## Multiple parameters one of two filled [/api/muri/foo/bar]
+
++ Parameters
+    + param1 (string, `example`) ... Parameter for the request
+    + param2 (string, `example`) ... Parameter for the request
+
+### Get with filled URI template parameter [GET]
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+               "id": "multiple parameters two of two"
             }
 
 ## Multiple parameters two of two filled [/api/muri/foo/bar{?q1}]
